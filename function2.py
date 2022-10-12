@@ -61,3 +61,41 @@ def change(x):
 change(wordlist)
 print("---------")
 print("함수 호출후:{0}".format(wordlist))
+
+
+#불변 가변형식
+print("---불변형식---")
+a=1.2
+print(id(a))
+a=2.3
+print(id(a))
+
+print("---가변형식---")
+lst=[1,2,3]
+print(id(lst))
+lst.append(4)
+print(id(lst))
+
+print("---global---")
+
+g=1
+def testScope(a):
+    #전역변수를 맵핑해주면 불변도 바꿔줄수있다
+    #global g
+    g = 2
+    return g+a
+
+#호출
+testScope(1)
+print(testScope(1))
+print("함수호출 후 g:{0}" .format(g))
+
+print("---기본값---")
+def times(a=10, b=20):
+    return a*b
+
+#호출
+print(times())
+print(times(5))
+print(times(5,6))
+

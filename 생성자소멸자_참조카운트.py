@@ -8,10 +8,8 @@ class MyClass:
 
 #인스턴스 생성 
 d = MyClass(10)
-d_copy = d
-del d_copy 
 del d
+##del d 는 애초에 자동으로 메모리를 없애주기 때문에 필요없다.   
 
 
-
-
+print ("---전체 코드 실행 종료")

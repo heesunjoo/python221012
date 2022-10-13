@@ -1,3 +1,5 @@
+
+
 # 정적메서드.py
 class MyCalc(object):
     @staticmethod
